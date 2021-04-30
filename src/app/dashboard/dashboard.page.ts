@@ -8,20 +8,8 @@ import { UserData } from '../providers/user-data';
   templateUrl: './dashboard.page.html',
   styleUrls: ['./dashboard.page.scss'],
 })
-export class DashboardPage implements OnInit {
-
-  // Gets a reference to the list element
-  @ViewChild('scheduleList', { static: true }) scheduleList: IonList;
-
-  ios: boolean;
-  dayIndex = 0;
-  queryText = '';
-  segment = 'all';
-  excludeTracks: any = [];
-  shownSessions: any = [];
-  groups: any = [];
-  confDate: string;
-  showSearchbar: boolean;
+export class DashboardPage {
+  speakers: any[] = [];
 
   constructor(
     public confData: ConferenceData,
@@ -29,19 +17,9 @@ export class DashboardPage implements OnInit {
     public config: Config
   ) { }
 
-  ngOnInit() {
-    this.updateSchedule();
-  }
-
-  updateSchedule() {
-    // Close any open sliding items when the schedule updates
-    if (this.scheduleList) {
-      this.scheduleList.closeSlidingItems();
-    }
-
-    this.confData.getTimeline(this.dayIndex, this.queryText, this.excludeTracks, this.segment).subscribe((data: any) => {
-      this.shownSessions = data.shownSessions;
-      this.groups = data.groups;
+  ionViewDidEnter() {
+    this.confData.getSpeakers().subscribe((speakers: any[]) => {
+      this.speakers = speakers;
     });
   }
 

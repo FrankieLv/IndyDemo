@@ -246,8 +246,9 @@
 
   "speakers": [
     {
-      "name": "Burt Bear",
+      "name": "Outstanding Inspections",
       "profilePic": "/assets/img/speakers/bear.jpg",
+      "type": "OI",
       "instagram": "ionicframework",
       "twitter": "ionicframework",
       "about": "Burt is a Bear. Burt's interests include poetry, dashing space heroes, and lions.",
@@ -258,7 +259,8 @@
       "id": "1"
     },
     {
-      "name": "Charlie Cheetah",
+      "name": "Outstanding Exceptions",
+      "type": "OE",
       "profilePic": "/assets/img/speakers/cheetah.jpg",
       "instagram": "ionicframework",
       "twitter": "ionicframework",
@@ -270,7 +272,8 @@
       "id": "2"
     },
     {
-      "name": "Donald Duck",
+      "name": "Outstanding Profile Actions",
+      "type": "OPA",
       "profilePic": "/assets/img/speakers/duck.jpg",
       "instagram": "ionicframework",
       "twitter": "ionicframework",
@@ -283,6 +286,7 @@
     },
     {
       "name": "Eva Eagle",
+      "type": "OPA",
       "profilePic": "/assets/img/speakers/eagle.jpg",
       "instagram": "ionicframework",
       "twitter": "ionicframework",
@@ -295,6 +299,7 @@
     },
     {
       "name": "Ellie Elephant",
+      "type": "OPA",
       "profilePic": "/assets/img/speakers/elephant.jpg",
       "instagram": "ionicframework",
       "twitter": "ionicframework",
@@ -307,6 +312,7 @@
     },
     {
       "name": "Gino Giraffe",
+      "type": "OPA",
       "profilePic": "/assets/img/speakers/giraffe.jpg",
       "instagram": "ionicframework",
       "twitter": "ionicframework",
@@ -319,6 +325,7 @@
     },
     {
       "name": "Isabella Iguana",
+      "type": "OPA",
       "profilePic": "/assets/img/speakers/iguana.jpg",
       "instagram": "ionicframework",
       "twitter": "ionicframework",
@@ -331,6 +338,7 @@
     },
     {
       "name": "Karl Kitten",
+      "type": "OPA",
       "profilePic": "/assets/img/speakers/kitten.jpg",
       "instagram": "ionicframework",
       "twitter": "ionicframework",
@@ -343,6 +351,7 @@
     },
     {
       "name": "Lionel Lion",
+      "type": "OPA",
       "profilePic": "/assets/img/speakers/lion.jpg",
       "instagram": "ionicframework",
       "twitter": "ionicframework",
@@ -355,6 +364,7 @@
     },
     {
       "name": "Molly Mouse",
+      "type": "OPA",
       "profilePic": "/assets/img/speakers/mouse.jpg",
       "instagram": "ionicframework",
       "twitter": "ionicframework",
@@ -367,6 +377,7 @@
     },
     {
       "name": "Paul Puppy",
+      "type": "OPA",
       "profilePic": "/assets/img/speakers/puppy.jpg",
       "instagram": "ionicframework",
       "twitter": "ionicframework",
@@ -379,6 +390,7 @@
     },
     {
       "name": "Rachel Rabbit",
+      "type": "OPA",
       "profilePic": "/assets/img/speakers/rabbit.jpg",
       "instagram": "ionicframework",
       "twitter": "ionicframework",
@@ -391,6 +403,7 @@
     },
     {
       "name": "Ted Turtle",
+      "type": "OPA",
       "profilePic": "/assets/img/speakers/turtle.jpg",
       "instagram": "ionicframework",
       "twitter": "ionicframework",
