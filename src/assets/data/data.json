@@ -244,237 +244,132 @@
     }
   ],
 
-  "speakers": [
+  "outstandings": [
     {
       "name": "Outstanding Inspections",
-      "profilePic": "/assets/img/speakers/bear.jpg",
       "type": "OI",
-      "instagram": "ionicframework",
-      "twitter": "ionicframework",
-      "about": "Burt is a Bear. Burt's interests include poetry, dashing space heroes, and lions.",
-      "title": "Software Engineer",
-      "location": "Everywhere",
-      "email": "burt@example.com",
-      "phone": "+1-541-754-3010",
-      "id": "1"
+      "list": [
+        {
+          "desc": "2020 Inspection Manage1r",
+          "inspectionDeadline": "Mar-3-2021",
+          "status": "submitted"
+        },
+        {
+          "desc": "2020 Inspection Manager2",
+          "inspectionDeadline": "Mar-3-2021",
+          "status": "submitted"
+        },
+        {
+          "desc": "2020 Inspection Manager3",
+          "inspectionDeadline": "Mar-3-2021",
+          "status": "submitted"
+        }
+      ]
     },
     {
       "name": "Outstanding Exceptions",
       "type": "OE",
-      "profilePic": "/assets/img/speakers/cheetah.jpg",
-      "instagram": "ionicframework",
-      "twitter": "ionicframework",
-      "about": "Charlie is a Cheetah. Charlie's interests include country music, plush animals, pyrotechnics, and skeletons.",
-      "title": "Software Engineer",
-      "location": "Everywhere",
-      "email": "charlie@example.com",
-      "phone": "+1-541-754-3010",
-      "id": "2"
+      "list": [
+        {
+          "desc": "Yellow Corp",
+          "actionRequiredBy": "Feb-2-2021",
+          "status": "restricted"
+        },
+        {
+          "desc": "Apple Computer",
+          "actionRequiredBy": "Feb-2-2021",
+          "status": "restricted"
+        },
+        {
+          "desc": "Tesla",
+          "actionRequiredBy": "Feb-2-2021",
+          "status": "restricted"
+        },
+        {
+          "desc": "Gamestop",
+          "actionRequiredBy": "Feb-2-2021",
+          "status": "restricted"
+        }
+      ]
     },
     {
       "name": "Outstanding Profile Actions",
       "type": "OPA",
-      "profilePic": "/assets/img/speakers/duck.jpg",
-      "instagram": "ionicframework",
-      "twitter": "ionicframework",
-      "about": "Donald is a Duck. Donald's interests include carpentry, superheroes, merpeople, and glam rock.",
-      "title": "Software Engineer",
-      "location": "Everywhere",
-      "email": "donald@example.com",
-      "phone": "+1-541-754-3010",
-      "id": "3"
-    },
-    {
-      "name": "Eva Eagle",
-      "type": "OPA",
-      "profilePic": "/assets/img/speakers/eagle.jpg",
-      "instagram": "ionicframework",
-      "twitter": "ionicframework",
-      "about": "Eva is an Eagle. Eva's interests include ants, seashells, and cupcakes.",
-      "title": "Developer Advocate",
-      "location": "Everywhere",
-      "email": "eva@example.com",
-      "phone": "+1-541-754-3010",
-      "id": "4"
-    },
-    {
-      "name": "Ellie Elephant",
-      "type": "OPA",
-      "profilePic": "/assets/img/speakers/elephant.jpg",
-      "instagram": "ionicframework",
-      "twitter": "ionicframework",
-      "about": "Ellie is an Elephant. Ellie's interests include pocket watches, pool, hand fans, and ninjas.",
-      "title": "Software Engineer",
-      "location": "Everywhere",
-      "email": "ellie@example.com",
-      "phone": "+1-541-754-3010",
-      "id": "5"
-    },
-    {
-      "name": "Gino Giraffe",
-      "type": "OPA",
-      "profilePic": "/assets/img/speakers/giraffe.jpg",
-      "instagram": "ionicframework",
-      "twitter": "ionicframework",
-      "about": "Gino is a Giraffe. Gino's interests include candy-making, unicorns, and birdhouses.",
-      "title": "Software Engineer",
-      "location": "Everywhere",
-      "email": "gino@example.com",
-      "phone": "+1-541-754-3010",
-      "id": "6"
-    },
-    {
-      "name": "Isabella Iguana",
-      "type": "OPA",
-      "profilePic": "/assets/img/speakers/iguana.jpg",
-      "instagram": "ionicframework",
-      "twitter": "ionicframework",
-      "about": "Isabella is an Iguana. Isabella's interests include crystals, architecture, and candle-making.",
-      "title": "Software Engineer",
-      "location": "Everywhere",
-      "email": "isabella@example.com",
-      "phone": "+1-541-754-3010",
-      "id": "7"
-    },
-    {
-      "name": "Karl Kitten",
-      "type": "OPA",
-      "profilePic": "/assets/img/speakers/kitten.jpg",
-      "instagram": "ionicframework",
-      "twitter": "ionicframework",
-      "about": "Karl is a Kitten. Karl's interests include skiing, jewelry, and needlepoint.",
-      "title": "Developer Advocate",
-      "location": "Everywhere",
-      "email": "karl@example.com",
-      "phone": "+1-541-754-3010",
-      "id": "8"
-    },
-    {
-      "name": "Lionel Lion",
-      "type": "OPA",
-      "profilePic": "/assets/img/speakers/lion.jpg",
-      "instagram": "ionicframework",
-      "twitter": "ionicframework",
-      "about": "Lionel is a Lion. Lionel's interests include lizards and mathematics.",
-      "title": "Developer Advocate",
-      "location": "Everywhere",
-      "email": "lionel@example.com",
-      "phone": "+1-541-754-3010",
-      "id": "9"
-    },
-    {
-      "name": "Molly Mouse",
-      "type": "OPA",
-      "profilePic": "/assets/img/speakers/mouse.jpg",
-      "instagram": "ionicframework",
-      "twitter": "ionicframework",
-      "about": "Molly is a Mouse. Molly's interests include werewolves and magic.",
-      "title": "Software Engineer",
-      "location": "Everywhere",
-      "email": "molly@example.com",
-      "phone": "+1-541-754-3010",
-      "id": "10"
-    },
-    {
-      "name": "Paul Puppy",
-      "type": "OPA",
-      "profilePic": "/assets/img/speakers/puppy.jpg",
-      "instagram": "ionicframework",
-      "twitter": "ionicframework",
-      "about": "Paul is a Puppy. Paul's interests include maps, whales, and dragons.",
-      "title": "Software Engineer",
-      "location": "Everywhere",
-      "email": "paul@example.com",
-      "phone": "+1-541-754-3010",
-      "id": "11"
-    },
-    {
-      "name": "Rachel Rabbit",
-      "type": "OPA",
-      "profilePic": "/assets/img/speakers/rabbit.jpg",
-      "instagram": "ionicframework",
-      "twitter": "ionicframework",
-      "about": "Rachel is a Rabbit. Rachel's interests include clowns, skeletons, and yo-yos.",
-      "title": "Senior Software Engineer",
-      "location": "Everywhere",
-      "email": "rachel@example.com",
-      "phone": "+1-541-754-3010",
-      "id": "12"
-    },
-    {
-      "name": "Ted Turtle",
-      "type": "OPA",
-      "profilePic": "/assets/img/speakers/turtle.jpg",
-      "instagram": "ionicframework",
-      "twitter": "ionicframework",
-      "about": "Ted is a Turtle. Ted's interests include butterflies, skiing, and cupcakes.",
-      "title": "Software Engineer",
-      "location": "Everywhere",
-      "email": "ted@example.com",
-      "phone": "+1-541-754-3010",
-      "id": "13"
+      "list": [
+        {
+          "desc": "Declare Finance Interests1",
+          "expires": "Feb-2-2021",
+          "status": "Not Strated"
+        },
+        {
+          "desc": "Declare Finance Interests2",
+          "expires": "Feb-2-2021",
+          "status": "Not Strated"
+        },
+        {
+          "desc": "Declare Finance Interests3",
+          "expires": "Feb-2-2021",
+          "status": "restricted"
+        },
+        {
+          "desc": "Declare Finance Interests4",
+          "expires": "Feb-2-2021",
+          "status": "Not Strated"
+        }
+      ]
     }
   ],
 
-  "map": [
+  "portfoliosdata": [
     {
-      "name": "Monona Terrace Convention Center",
-      "lat": 43.071584,
-      "lng": -89.38012,
-      "center": true
+      "name": "Apple Computer1",
+      "entityType": "Stock",
+      "identifier": "1122",
+      "status": "restricted"
     },
     {
-      "name": "Ionic HQ",
-      "lat": 43.074395,
-      "lng": -89.381056
+      "name": "Apple Computer2",
+      "identifier": "2233",
+      "entityType": "Stock",
+      "status": "restricted"
     },
     {
-      "name": "Afterparty - Brocach Irish Pub",
-      "lat": 43.07336,
-      "lng": -89.38335
-    }
-  ],
-
-  "tracks": [
-    {
-      "name": "Angular",
-      "icon": "logo-angular"
+      "name": "Gamestop1",
+      "identifier": "GEM1",
+      "entityType": "Stock",
+      "status": "selfcleared"
     },
     {
-      "name": "Documentation",
-      "icon": "document"
+      "name": "Gamestop3",
+      "identifier": "GEM3",
+      "entityType": "Stock",
+      "status": "selfcleared"
     },
     {
-      "name": "Food",
-      "icon": "restaurant"
+      "name": "Gamestop3",
+      "identifier": "GEM3",
+      "entityType": "Stock",
+      "status": "selfcleared"
     },
     {
-      "name": "Ionic",
-      "icon": "logo-ionic"
-    },
-    {
-      "name": "Tooling",
-      "icon": "hammer"
-    },
-    {
-      "name": "Design",
-      "icon": "color-palette"
-    },
-    {
-      "name": "Services",
-      "icon": "cog"
-    },
-    {
-      "name": "Workshop",
-      "icon": "construct"
-    },
-    {
-      "name": "Communication",
-      "icon": "call"
-    },
-    {
-      "name": "Navigation",
-      "icon": "compass"
+      "name": "Charles Schwab",
+      "identifier": "My Account 3344",
+      "entityType": "Account",
+      "status": "Import Pending",
+      "associatedHoldings": [
+        {
+          "name": "Gamestop3",
+          "identifier": "GEM3",
+          "entityType": "Stock",
+          "status": "selfcleared"
+        },
+        {
+          "name": "Gamestop3",
+          "identifier": "GEM3",
+          "entityType": "Stock",
+          "status": "selfcleared"
+        }
+      ]
     }
   ]
 }
