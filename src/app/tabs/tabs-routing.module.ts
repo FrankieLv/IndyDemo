@@ -17,7 +17,7 @@ const routes: Routes = [
       },
       {
         path: 'portfolio',
-        loadChildren: () => import('../portfolio/portfolio.module').then(m => m.PortfolioPageModule)
+        loadChildren: () => import('../portfolio/portfolio.module').then(m => m.PortfolioPageModule)   
       },
       {
         path: 'alerts',

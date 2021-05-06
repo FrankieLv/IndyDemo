@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { Config, IonList } from '@ionic/angular';
-import { ConferenceData } from '../providers/conference-data';
+import { DummyData } from '../providers/data';
 
 @Component({
   selector: 'app-portfolio',
@@ -13,13 +12,13 @@ export class PortfolioPage {
 
 
   constructor(
-    public confData: ConferenceData,
+    public dummyData: DummyData,
   ) { 
 
   }
 
   ionViewDidEnter() {
-    this.confData.getPortfolioData().subscribe((portfoliosdata: any[]) => {
+    this.dummyData.getPortfolioData().subscribe((portfoliosdata: any[]) => {
       this.portfoliosdata = portfoliosdata;
     });
   }

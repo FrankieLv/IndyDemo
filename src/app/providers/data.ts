@@ -1,12 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { of } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { filter, map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ConferenceData {
+export class DummyData {
   data: any;
 
   constructor(public http: HttpClient) {}
@@ -38,6 +38,18 @@ export class ConferenceData {
     return this.load().pipe(
       map((data: any) => { return data.portfoliosdata })
     );
+  }
+
+
+  loadHoldingDetail(): any { 
+      return this.http
+        .get('assets/data/holdingdetail.json');
+  }
+
+  getHoldingDetail(id: string): any{
+    return this.loadHoldingDetail().pipe(
+        map((data: any) => { return data.holdingdetail })
+      );
   }
 
 }

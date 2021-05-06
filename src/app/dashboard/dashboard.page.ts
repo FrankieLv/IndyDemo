@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Config, IonList } from '@ionic/angular';
-import { ConferenceData } from '../providers/conference-data';
+import { DummyData } from '../providers/data';
 
 @Component({
   selector: 'app-dashboard',
@@ -11,12 +11,12 @@ export class DashboardPage {
   outstandings: any[] = [];
 
   constructor(
-    public confData: ConferenceData,
+    public dummyData: DummyData,
     public config: Config
   ) { }
 
   ionViewDidEnter() {
-    this.confData.getDashboardData().subscribe((outstandings: any[]) => {
+    this.dummyData.getDashboardData().subscribe((outstandings: any[]) => {
       this.outstandings = outstandings;
     });
   }

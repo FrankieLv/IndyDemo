@@ -6,7 +6,16 @@ import { PortfolioPage } from './portfolio.page';
 const routes: Routes = [
   {
     path: '',
-    component: PortfolioPage
+    children: [
+      {
+        path: '',
+        component: PortfolioPage,
+      },
+      {
+        path: 'holdingdetail/:id',
+        loadChildren: () => import('../holding-detail/holding-detail.module').then(m => m.HoldingDetailPageModule)
+      }
+    ]  
   }
 ];
 

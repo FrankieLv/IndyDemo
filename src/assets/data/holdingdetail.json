@@ -1,0 +1,65 @@
+{
+  "holdingdetail": [
+    {
+      "id": "001",
+      "status": "restricted",
+      "holdingInfo": {
+        "type": "Stock",
+        "AcquiredBy": "Inheritance",
+        "AcquiredDate": "Mar-3-2021",
+        "Portfolio": "Frankie's Portfolio"
+      },
+      "securityInfo":{
+        "aliasName": "Apple Computer1",
+        "country": "United Stated (US)",
+        "identifier": "AppleC",
+        "exchange": "United States(USA)",
+        "cusip": "1234567",
+        "ISIN": "12345677"
+      }
+    },
+    {
+      "id": "002",
+      "status": "restricted",
+      "holdingInfo": {
+        "type": "Stock",
+        "AcquiredBy": "Inheritance",
+        "AcquiredDate": "Mar-3-2021",
+        "Portfolio": "Frankie's Portfolio"
+      },
+      "securityInfo":{
+        "aliasName": "Apple Computer1",
+        "country": "United Stated (US)",
+        "identifier": "AppleC",
+        "exchange": "United States(USA)",
+        "cusip": "1234567",
+        "ISIN": "12345677"
+      }
+    },
+    {
+      "id": "003",
+      "status": "restricted",
+      "holdingInfo": {
+        "type": "Stock",
+        "AcquiredBy": "Inheritance",
+        "AcquiredDate": "Mar-3-2021",
+        "Portfolio": "Frankie's Portfolio"
+      },
+      "securityInfo":{
+        "aliasName": "Gamestop",
+        "country": "United Stated (US)",
+        "identifier": "AppleC",
+        "exchange": "United States(USA)",
+        "cusip": "1234567",
+        "ISIN": "12345677"
+      }
+    },
+    {
+      "name": "Gamestop3",
+      "id": "004",
+      "identifier": "GEM3",
+      "entityType": "Stock",
+      "status": "selfcleared"
+    }
+  ]
+}

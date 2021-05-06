@@ -33,7 +33,7 @@
       </ion-item-divider>
 
       <ion-item-sliding *ngFor="let holding of portfoliosdata">
-        <ion-item routerLink="">
+        <ion-item routerLink="/tabs/portfolio/holdingdetail/{{holding.id}}">
           <ion-label>
             <h3>{{holding.name}}</h3>
             <p>
@@ -43,6 +43,15 @@
               {{holding.identifier}}
             </p>
           </ion-label>
+          <ion-chip color="danger" *ngIf="holding?.status == 'restricted'">
+            <ion-label>Restricted</ion-label>
+          </ion-chip>
+          <ion-chip color="warning" *ngIf="holding?.status == 'selfcleared'">
+            <ion-label>Self-Cleared</ion-label>
+          </ion-chip>
+          <ion-chip color="dark" *ngIf="holding?.status == 'importpending'">
+            <ion-label>Import Pending</ion-label>
+          </ion-chip>
         </ion-item>
       </ion-item-sliding>
     </ion-item-group>
