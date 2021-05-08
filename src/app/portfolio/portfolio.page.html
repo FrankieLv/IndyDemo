@@ -33,7 +33,7 @@
       </ion-item-divider>
 
       <ion-item-sliding *ngFor="let holding of portfoliosdata">
-        <ion-item routerLink="/tabs/portfolio/holdingdetail/{{holding.id}}" [hidden]="holding?.hide">
+        <ion-item routerLink="/app/tabs/portfolio/holdingdetail/{{holding.id}}" [hidden]="holding?.hide">
           <ion-label>
             <h2 class = "list-item">{{holding.name}}</h2>
             <p>
