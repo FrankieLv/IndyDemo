@@ -10,38 +10,41 @@
 
 <ion-content fullscreen="true">
 
-  <ion-grid fixed>
+  <ion-grid>
     <ion-row>
       <ion-col size="12" size-md="6" *ngFor="let outstanding of outstandings">
         <ion-card>
           <ion-card-header>
-            <ion-item detail="false" lines="none" class="speaker-item" routerLink="">
-              <ion-icon *ngIf="outstanding.type == 'OI'" name="document-text-outline"></ion-icon>
-              <ion-icon *ngIf="outstanding.type == 'OE'" name="alert-circle-outline"></ion-icon>
-              <ion-icon *ngIf="outstanding.type == 'OPA'" name="person-outline"></ion-icon>
+            <ion-item detail="false" lines="none">
+              <ion-icon class="ion-icon" *ngIf="outstanding.type == 'OI'" name="folder-open"></ion-icon>
+              <ion-icon class="ion-icon" *ngIf="outstanding.type == 'OE'" name="flame"></ion-icon>
+              <ion-icon class="ion-icon" *ngIf="outstanding.type == 'OPA'" name="person"></ion-icon>
               <ion-label>
-                <h2>{{outstanding.name}}</h2>
+                <h2><b>{{outstanding.name}}</b></h2>
               </ion-label>
             </ion-item>
           </ion-card-header>
 
           <ion-card-content>
             <ion-list lines="none">
-              <ion-item *ngFor="let item of outstanding.list" detail="false" routerLink="">
+              <ion-item *ngFor="let item of outstanding.list" routerLink="">
                   <ion-label>
-                    <h3>{{item?.desc}}</h3>
+                    <h2 class="list-item">{{item?.desc}}</h2>
                     <p *ngIf="outstanding.type == 'OI'">Inspection Deadline: {{item?.inspectionDeadline}}</p>
                     <p *ngIf="outstanding.type == 'OE'">Action Required By: {{item?.actionRequiredBy}}</p>
                     <p *ngIf="outstanding.type == 'OPA'">Expires: {{item?.expires}}</p>
                   </ion-label>
-                  <ion-chip calss="outstainding-item" color="danger" *ngIf="item?.status == 'restricted'">
+                  <ion-chip class="restricted"  *ngIf="item?.status == 'restricted'">
                     <ion-label>Restricted</ion-label>
                   </ion-chip>
-                  <ion-chip calss="outstainding-item" color="dark" *ngIf="item?.status == 'Not Strated'">
+                  <ion-chip class="notstarted" *ngIf="item?.status == 'Not Strated'">
                     <ion-label>Not Strated</ion-label>
                   </ion-chip>
-                  <ion-chip calss="outstainding-item" color="dark" *ngIf="item?.status == 'submitted'">
+                  <ion-chip class="submitted" *ngIf="item?.status == 'submitted'">
                     <ion-label>Submitted</ion-label>
+                  </ion-chip>
+                  <ion-chip class="overdue" *ngIf="item?.status == 'overdue'">
+                    <ion-label>Overdue</ion-label>
                   </ion-chip>
               </ion-item>
             </ion-list>

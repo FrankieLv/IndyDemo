@@ -1,23 +1,25 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="Back" icon="chevron-back"></ion-back-button>
+    </ion-buttons> 
     <ion-title *ngIf="holdingDetail?.holdingInfo.type === 'Stock'">Stock Details</ion-title>
     <ion-title *ngIf="holdingDetail?.holdingInfo.type === 'Issuer'">Issuer Details</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-toolbar>
-    <ion-title>{{ holdingDetail?.securityInfo.aliasName }}</ion-title>
-  </ion-toolbar>
-  <ion-toolbar>
-    <ion-chip calss="outstainding-item" color="danger" *ngIf="holdingDetail?.status === 'restricted'">
+  <ion-item>
+    <ion-label class="title">{{ holdingDetail?.securityInfo.aliasName }}</ion-label>
+    <ion-chip class="restricted" *ngIf="holdingDetail?.status === 'restricted'">
       <ion-label>Restricted</ion-label>
     </ion-chip>
-  </ion-toolbar>
+  </ion-item>
+
   <ion-card>
     <ion-card-header>
-      <ion-item detail="false" lines="none" routerLink="">
-        <h6>Holding Information</h6>
+      <ion-item class="item-title">
+        <ion-label>Holding Information</ion-label>
       </ion-item>
     </ion-card-header>
 
@@ -25,26 +27,26 @@
       <ion-list>
         <ion-item> 
           <ion-label>
-            <h6> Holding Type </h6>
-            <h2>{{ holdingDetail?.holdingInfo.type }} </h2>
+            <p class="item-sub-title"> Holding Type </p>
+            <p class="item-content"> {{ holdingDetail?.holdingInfo.type }} </p>
           </ion-label>
         </ion-item>
         <ion-item> 
           <ion-label>
-            <h6> Acquired By </h6>
-            <h2> {{ holdingDetail?.holdingInfo.AcquiredBy }} </h2>
+            <p class="item-sub-title"> Acquired By </p>
+            <p class="item-content"> {{ holdingDetail?.holdingInfo.AcquiredBy }} </p>
           </ion-label>
         </ion-item>
         <ion-item> 
           <ion-label>
-           <h6> Acquired Date </h6>
-           <h2>{{ holdingDetail?.holdingInfo.AcquiredDate }} </h2>
+            <p class="item-sub-title"> Acquired Date </p>
+            <p class="item-content"> {{ holdingDetail?.holdingInfo.AcquiredDate }} </p>
           </ion-label>
         </ion-item>
         <ion-item>
           <ion-label>
-            <h6> Portfolio </h6>
-            <h2>{{ holdingDetail?.holdingInfo.Portfolio }} </h2>
+            <p class="item-sub-title"> Portfolio </p>
+            <p class="item-content"> {{ holdingDetail?.holdingInfo.Portfolio }} </p>
           </ion-label>
         </ion-item>
       </ion-list>
@@ -54,8 +56,8 @@
 
   <ion-card>
     <ion-card-header>
-      <ion-item detail="false" lines="none" routerLink="">
-        <h6>Stock Information</h6>
+      <ion-item class="item-title">
+        <ion-label>Stock Information</ion-label>
       </ion-item>
     </ion-card-header>
 
@@ -63,42 +65,47 @@
       <ion-list>
         <ion-item> 
           <ion-label>
-            <h6> Stock Alias Name</h6>
-            <h2>{{ holdingDetail?.securityInfo.aliasName }} </h2>
+            <p class="item-sub-title"> Stock Alias Name </p>
+            <p class="item-content"> {{ holdingDetail?.securityInfo.aliasName }} </p>
           </ion-label>
         </ion-item>
         <ion-item> 
           <ion-label>
-            <h6>Country of Origin </h6>
-            <h2> {{ holdingDetail?.securityInfo.country }} </h2>
+            <p class="item-sub-title"> Country of Origin </p>
+            <p class="item-content"> {{ holdingDetail?.securityInfo.country }} </p>
           </ion-label>
         </ion-item>
         <ion-item> 
           <ion-label>
-           <h6> Symbol(Exchange) </h6>
-           <h2>{{ holdingDetail?.securityInfo.identifier }} </h2>
+            <p class="item-sub-title"> Symbol(Exchange) </p>
+            <p class="item-content"> {{ holdingDetail?.securityInfo.identifier }} </p>
           </ion-label>
         </ion-item>
         <ion-item>
           <ion-label>
-            <h6> Exchange </h6>
-            <h2>{{ holdingDetail?.securityInfo.exchange }} </h2>
+            <p class="item-sub-title"> Exchange </p>
+            <p class="item-content"> {{ holdingDetail?.securityInfo.exchange }} </p>
           </ion-label>
         </ion-item>
         <ion-item>
           <ion-label>
-            <h6> CUSIP </h6>
-            <h2>{{ holdingDetail?.securityInfo.cusip }} </h2>
+            <p class="item-sub-title"> CUSIP </p>
+            <p class="item-content"> {{ holdingDetail?.securityInfo.cusip }} </p>
           </ion-label>
         </ion-item>
         <ion-item>
           <ion-label>
-            <h6> ISIN </h6>
-            <h2>{{ holdingDetail?.securityInfo.ISIN }} </h2>
+            <p class="item-sub-title"> ISIN </p>
+            <p class="item-content"> {{ holdingDetail?.securityInfo.ISIN }} </p>
           </ion-label>
         </ion-item>
       </ion-list>
     </ion-card-content>
   </ion-card>
-  <ion-button  expand="block" (click)="handleManageHoldingButtonClick()">Manage Holding</ion-button>
+  <ion-footer>
+    <ion-toolbar>
+      <ion-button expand="block" (click)="handleManageHoldingButtonClick()">Manage Holding</ion-button>
+    </ion-toolbar>
+  </ion-footer>
+
 </ion-content>

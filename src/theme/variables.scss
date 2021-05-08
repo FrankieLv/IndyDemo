@@ -58,6 +58,7 @@
   --ion-color-dark-contrast-rgb: 255, 255, 255;
   --ion-color-dark-shade: #1e2023;
   --ion-color-dark-tint: #383a3e;
+  --ion-color-step-350: #595959;
 
   /** medium **/
   --ion-color-medium: #92949c;
@@ -74,6 +75,10 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  /** **/
+  --ion-color-base: #0A6C86;
+
 }
 
 .dark-theme {
@@ -376,5 +381,57 @@
     --ion-tab-bar-background: #1f1f1f;
 
     --ion-card-background: #1e1e1e;
+
   }
+}
+
+// Custom CSS
+
+.list-item{
+  font-size: 15px;
+}
+
+ion-chip {
+  --color:  rgb(252, 248, 248);
+  font-size: 11px;
+  width: auto;
+  height: 24px;
+  font-weight: bold;
+}
+
+.restricted {
+  background: red;
+}
+
+.overdue{
+  background: #F793F3;
+}
+
+.notstarted, .submitted, .importpending {
+  background: black;
+}
+
+.selfcleared {
+  background: #FFA500;
+  color:black;
+}
+
+ion-card{
+  width: auto;
+}
+
+.action-sheet-button-inner  {
+  color: black;
+}
+
+.action-sheet-icon {
+  color: var(--ion-color-base);
+}
+
+ion-menu-button {
+  --color: var(--ion-color-base);
+}
+
+ion-menu-toggle ion-icon {
+  color: var(--ion-color-base);
 }

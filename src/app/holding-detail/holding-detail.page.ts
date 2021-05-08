@@ -40,7 +40,8 @@ export class HoldingDetailPage {
         { text: 'Trasfer', icon: 'arrow-redo', },
         { text: 'Copy', icon: 'copy', },
         { text: 'Dispose', icon: 'trash'}
-      ]
+      ],
+      cssClass: "holding-management"
     });
 
     await actionSheet.present();

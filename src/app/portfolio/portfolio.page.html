@@ -21,7 +21,7 @@
 
     <ion-item-group>
       <ion-toolbar>
-        <ion-searchbar></ion-searchbar>
+        <ion-searchbar [(ngModel)]="queryText" (ionChange)="updatePortfolioData()" placeholder="Search"></ion-searchbar>
       </ion-toolbar>
    </ion-item-group>
 
@@ -33,9 +33,9 @@
       </ion-item-divider>
 
       <ion-item-sliding *ngFor="let holding of portfoliosdata">
-        <ion-item routerLink="/tabs/portfolio/holdingdetail/{{holding.id}}">
+        <ion-item routerLink="/tabs/portfolio/holdingdetail/{{holding.id}}" [hidden]="holding?.hide">
           <ion-label>
-            <h3>{{holding.name}}</h3>
+            <h2 class = "list-item">{{holding.name}}</h2>
             <p>
               {{holding.entityType}}
             </p>
@@ -43,13 +43,13 @@
               {{holding.identifier}}
             </p>
           </ion-label>
-          <ion-chip color="danger" *ngIf="holding?.status == 'restricted'">
+          <ion-chip class="restricted" *ngIf="holding?.status == 'restricted'">
             <ion-label>Restricted</ion-label>
           </ion-chip>
-          <ion-chip color="warning" *ngIf="holding?.status == 'selfcleared'">
+          <ion-chip class="selfcleared" *ngIf="holding?.status == 'selfcleared'">
             <ion-label>Self-Cleared</ion-label>
           </ion-chip>
-          <ion-chip color="dark" *ngIf="holding?.status == 'importpending'">
+          <ion-chip class="importpending" *ngIf="holding?.status == 'importpending'">
             <ion-label>Import Pending</ion-label>
           </ion-chip>
         </ion-item>

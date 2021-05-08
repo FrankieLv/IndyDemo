@@ -1,0 +1,42 @@
+.title {
+    font-size: 22px;
+    font-weight: bolder;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.item-title {
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.item-sub-title {
+    font-size: 11px;
+    color: var(--ion-color-step-350t);
+    font-weight: bold;
+}
+
+.item-content {
+    font-size: 15px;
+    color: var(--ion-color-step-350);
+    font-weight: 300;
+}
+
+ion-card-header, ion-card-content {
+    padding-left: 1px;
+}
+
+ion-button {
+    padding-left: 15px;
+    padding-right: 15px;
+    --background: var(--ion-color-base);
+}
+
+ion-action-sheet {
+    --color: var(--ion-color-base);
+    --button-color:var(--ion-color-base);
+}
+
+ion-back-button{
+    --color: var(--ion-color-base);
+}
