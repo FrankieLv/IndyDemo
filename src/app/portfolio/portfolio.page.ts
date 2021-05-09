@@ -62,7 +62,7 @@ export class PortfolioPage {
     await loading.present();
     await loading.onDidDismiss().then((overlayDetail) => {
       this.dummyData.getPortfolioData().subscribe((portfoliosdata: any[]) => {
-        this.portfolios = ["Frankie's Portfoli", "Michale's Portfolio"];
+        this.portfolios = ["Frankie's Portfolio", "Michale's Portfolio"];
         this.portfoliosdata = portfoliosdata;
       });
     });

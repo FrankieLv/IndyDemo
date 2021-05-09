@@ -12,11 +12,13 @@
 
   <ion-list [hidden]="portfolios.length === 0">
     <ion-list-header>
-      <ion-select value="All Portfolios">
-        <ion-select-option value="All Portfolios">All Portfolios</ion-select-option>
-        <ion-select-option *ngFor="let portfolio of portfolios" value="{{portfolio}}">{{portfolio}}</ion-select-option>
-      </ion-select>
-      <ion-lable slot="end"><ion-icon name="folder"></ion-icon></ion-lable>
+      <ion-toolbar>
+        <ion-select slot="start" class="portfolio-title"  value="All Portfolios">
+          <ion-select-option value="All Portfolios">All Portfolios</ion-select-option>
+          <ion-select-option *ngFor="let portfolio of portfolios" value="{{portfolio}}">{{portfolio}}</ion-select-option>
+        </ion-select>
+        <ion-lable slot="end"><ion-icon name="folder"></ion-icon></ion-lable>
+      </ion-toolbar>
     </ion-list-header>
 
     <ion-item-group>
