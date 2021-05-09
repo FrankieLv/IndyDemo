@@ -7,30 +7,6 @@ const routes: Routes = [
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
   {
-    path: 'alerts',
-    loadChildren: () => import('./alerts/alerts.module').then( m => m.AlertsPageModule)
-  },
-  {
-    path: 'profile',
-    loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
-  },
-  {
-    path: 'dashboard',
-    loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule)
-  },
-  {
-    path: 'search',
-    loadChildren: () => import('./search/search.module').then( m => m.SearchPageModule)
-  },
-  {
-    path: 'portfolio',
-    loadChildren: () => import('./portfolio/portfolio.module').then( m => m.PortfolioPageModule)
-  },
-  {
-    path: 'holding-detail',
-    loadChildren: () => import('./holding-detail/holding-detail.module').then( m => m.HoldingDetailPageModule)
-  },
-  {
     path: 'app',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
