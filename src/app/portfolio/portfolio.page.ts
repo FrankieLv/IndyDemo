@@ -1,4 +1,5 @@
 import { Component, NgZone, OnInit, ViewChild } from '@angular/core';
+import { LoadingController } from '@ionic/angular';
 import { map } from 'rxjs/operators';
 import { DummyData } from '../providers/data';
 
@@ -8,14 +9,15 @@ import { DummyData } from '../providers/data';
   styleUrls: ['./portfolio.page.scss'],
 })
 export class PortfolioPage { 
-  portfolios = ["Frankie's Portfoli", "Michale's Portfolio"];
+  portfolios = [];
   portfoliosdata: any =[];
 
   queryText: string;
 
   constructor(
     public dummyData: DummyData,
-    private ngZone: NgZone
+    private ngZone: NgZone,
+    public loadingCtrl: LoadingController
   ) { 
 
   }
@@ -41,8 +43,28 @@ export class PortfolioPage {
 
 
   ionViewDidEnter() {
-    this.dummyData.getPortfolioData().subscribe((portfoliosdata: any[]) => {
-      this.portfoliosdata = portfoliosdata;
+    this.showLoadingOverlay();
+  }
+  
+  ionViewDidLeave(){
+    this.queryText = "";
+    this.portfolios = [];
+    this.portfoliosdata = [];
+  }
+
+  async showLoadingOverlay() {
+    const loading = await this.loadingCtrl.create({
+      spinner: "circular",
+      duration: 500,
+      message: 'Loading',
+      translucent: true
+    });
+    await loading.present();
+    await loading.onDidDismiss().then((overlayDetail) => {
+      this.dummyData.getPortfolioData().subscribe((portfoliosdata: any[]) => {
+        this.portfolios = ["Frankie's Portfoli", "Michale's Portfolio"];
+        this.portfoliosdata = portfoliosdata;
+      });
     });
   }
 }

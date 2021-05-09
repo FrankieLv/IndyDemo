@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { Config, IonList } from '@ionic/angular';
+import { LoadingController } from '@ionic/angular';
 import { DummyData } from '../providers/data';
 
 @Component({
@@ -12,12 +12,30 @@ export class DashboardPage {
 
   constructor(
     public dummyData: DummyData,
-    public config: Config
+    public loadingCtrl: LoadingController
   ) { }
 
+
   ionViewDidEnter() {
-    this.dummyData.getDashboardData().subscribe((outstandings: any[]) => {
-      this.outstandings = outstandings;
+    this.showLoadingOverlay();
+  }
+
+  ionViewDidLeave(){
+    this.outstandings = [];
+  }
+
+  async showLoadingOverlay() {
+    const loading = await this.loadingCtrl.create({
+      spinner: "circular",
+      duration: 500,
+      message: 'Loading',
+      translucent: true
+    });
+    await loading.present();
+    await loading.onDidDismiss().then((overlayDetail) => {
+      this.dummyData.getDashboardData().subscribe((outstandings: any[]) => {
+        this.outstandings = outstandings;
+      });
     });
   }
 

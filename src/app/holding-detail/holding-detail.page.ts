@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ActionSheetController } from '@ionic/angular';
+import { ActionSheetController, LoadingController } from '@ionic/angular';
 import { DummyData } from '../providers/data';
 
 @Component({
@@ -14,21 +14,14 @@ export class HoldingDetailPage {
   constructor(
     public dummyData: DummyData,
     private route: ActivatedRoute,
-    public actionSheetCtrl: ActionSheetController
+    public actionSheetCtrl: ActionSheetController,
+    public loadingCtrl: LoadingController
   ) { 
 
   }
 
   ionViewDidEnter() {
-    const holdingId = this.route.snapshot.paramMap.get('id');
-    this.dummyData.getHoldingDetail(holdingId).subscribe((data: any) => {
-      for(const holdingDetail of data){
-        if(holdingDetail && holdingDetail.id === holdingId){
-          this.holdingDetail = holdingDetail;
-          break;
-        }
-      }
-    });
+    this.showLoadingOverlay();
   }
 
 
@@ -45,6 +38,27 @@ export class HoldingDetailPage {
     });
 
     await actionSheet.present();
+  }
+
+  async showLoadingOverlay() {
+    const loading = await this.loadingCtrl.create({
+      spinner: "circular",
+      duration: 500,
+      message: 'Loading',
+      translucent: true
+    });
+    await loading.present();
+    await loading.onDidDismiss().then((overlayDetail) => {
+      const holdingId = this.route.snapshot.paramMap.get('id');
+      this.dummyData.getHoldingDetail(holdingId).subscribe((data: any) => {
+        for(const holdingDetail of data){
+          if(holdingDetail && holdingDetail.id === holdingId){
+            this.holdingDetail = holdingDetail;
+            break;
+          }
+        }
+      });
+    });
   }
 
 }

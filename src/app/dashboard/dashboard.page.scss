@@ -3,3 +3,14 @@ ion-icon {
     font-size: 25px;
     margin-right: 8px;
 }
+
+ion-card {
+    width: 92%;
+    padding: auto;
+}
+
+ion-card-header, ion-card-content {
+    padding-left: 2px;
+    padding-right: 2px;
+}
+

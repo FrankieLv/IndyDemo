@@ -2,10 +2,12 @@ ion-button {
     margin-top: 15px;
     margin-left: 15px;
     margin-right: 15px;
-    --background: var(--ion-color-base);
-    --background-activated: var(--ion-color-base);
 }
 
-ion-label {
+ion-label, ion-text p  {
     font-weight: bold;
+}
+
+ion-icon {
+    margin-right: 10px;
 }

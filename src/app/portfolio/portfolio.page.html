@@ -35,7 +35,7 @@
       <ion-item-sliding *ngFor="let holding of portfoliosdata">
         <ion-item routerLink="/app/tabs/portfolio/holdingdetail/{{holding.id}}" [hidden]="holding?.hide">
           <ion-label>
-            <h2 class = "list-item">{{holding.name}}</h2>
+            <h2 class="list-item">{{holding.name}}</h2>
             <p>
               {{holding.entityType}}
             </p>
@@ -56,9 +56,5 @@
       </ion-item-sliding>
     </ion-item-group>
   </ion-list>
-
-  <ion-list-header [hidden]="portfolios.length > 0">
-    No Sessions Found
-  </ion-list-header>
 
 </ion-content>

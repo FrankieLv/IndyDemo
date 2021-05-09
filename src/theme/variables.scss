@@ -181,6 +181,15 @@
   --ion-toolbar-background: #0d0d0d;
 
   --ion-item-background: #000000;
+
+  ion-item-divider {
+    --background: var(--ion-color-step-150);
+  }
+
+  .notstarted, .submitted, .importpending {
+    background: var(--ion-color-step-150);
+  }
+
 }
 
 
@@ -223,6 +232,14 @@
   --ion-toolbar-background: #1f1f1f;
 
   --ion-tab-bar-background: #1f1f1f;
+
+  ion-item-divider {
+    --background: var(--ion-color-step-150);
+  }
+
+  .notstarted, .submitted, .importpending {
+    background: var(--ion-color-step-150);
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -381,7 +398,6 @@
     --ion-tab-bar-background: #1f1f1f;
 
     --ion-card-background: #1e1e1e;
-
   }
 }
 
@@ -434,4 +450,9 @@ ion-menu-button {
 
 ion-menu-toggle ion-icon {
   color: var(--ion-color-base);
+}
+
+ion-button {
+  --background: var(--ion-color-base);
+  --background-activated: var(--ion-color-base);
 }
