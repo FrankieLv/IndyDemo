@@ -2,6 +2,7 @@ ion-button {
     margin-top: 15px;
     margin-left: 15px;
     margin-right: 15px;
+    --background: black;
 }
 
 ion-label, ion-text p  {
@@ -10,4 +11,8 @@ ion-label, ion-text p  {
 
 ion-icon {
     margin-right: 10px;
+}
+
+.login-image {
+    height: 400px;
 }

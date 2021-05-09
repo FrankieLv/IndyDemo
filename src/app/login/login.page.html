@@ -5,15 +5,15 @@
 </ion-header>
 
 <ion-content fullscreen="true">
-  <div>
-    <img src="assets/img/appicon.svg" alt="Ionic logo">
+  <div class="login-image">
+    <img src="assets/img/rocket.png" alt="Ionic logo">
   </div>
 
   <form #loginForm="ngForm" novalidate>
     <ion-list>
       <ion-item>
         <ion-icon name="person-circle-outline"></ion-icon>
-        <ion-input [(ngModel)]="login.username" name="username" type="text" #username="ngModel" spellcheck="false" autocapitalize="off"
+        <ion-input [(ngModel)]="login.username" name="username" type="text" #username="ngModel" placeholder="username" spellcheck="false" autocapitalize="off"
           required>
         </ion-input>
       </ion-item>
@@ -26,7 +26,7 @@
 
       <ion-item>
         <ion-icon name="lock-closed-outline"></ion-icon>
-        <ion-input [(ngModel)]="login.password" name="password" type="password" #password="ngModel" required>
+        <ion-input [(ngModel)]="login.password" name="password" type="password" #password="ngModel" placeholder="password" required>
         </ion-input>
       </ion-item>
 

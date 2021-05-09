@@ -13,9 +13,15 @@
   <ion-card *ngFor="let outstanding of outstandings">
     <ion-card-header>
       <ion-item detail="false" lines="none">
-        <ion-icon class="ion-icon" *ngIf="outstanding.type == 'OI'" name="folder-open"></ion-icon>
-        <ion-icon class="ion-icon" *ngIf="outstanding.type == 'OE'" name="flame"></ion-icon>
-        <ion-icon class="ion-icon" *ngIf="outstanding.type == 'OPA'" name="person"></ion-icon>
+        <ion-avatar slot="start" *ngIf="outstanding.type == 'OI'">
+          <img src="/assets/img/outstanding_inspection.png">
+        </ion-avatar>
+        <ion-avatar slot="start" *ngIf="outstanding.type == 'OE'">
+          <img src="/assets/img/outstanding_exception.png">
+        </ion-avatar>
+        <ion-avatar slot="start" *ngIf="outstanding.type == 'OPA'">
+          <img src="/assets/img/outstanding_profile.png">
+        </ion-avatar>
         <ion-label>
           <h2><b>{{outstanding.name}}</b></h2>
         </ion-label>

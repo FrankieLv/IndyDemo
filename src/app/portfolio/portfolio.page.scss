@@ -1,5 +1,5 @@
 ion-item-divider {
-    --background: #eaf5fb;
+    --background: rgb(223, 239, 247);
 }
 ion-list-header{
     width: 95%;
@@ -8,5 +8,8 @@ ion-list-header{
     font-size: 20px;
     font-weight: bolder;
     padding-left:0px;
+}
 
+ion-chip {
+    padding-left: 0px;
 }

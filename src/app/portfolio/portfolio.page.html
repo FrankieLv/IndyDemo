@@ -27,11 +27,20 @@
       </ion-toolbar>
    </ion-item-group>
 
-    <ion-item-group *ngFor="let portfolio of portfolios">
+    <ion-item-group *ngFor="let portfolio of portfolios; let i=index;">
       <ion-item-divider sticky>
+        <ion-chip>
+          <ion-avatar *ngIf="i == 0">
+            <img src="/assets/img/panda.png">
+          </ion-avatar>
+          <ion-avatar *ngIf="i != 0">
+            <img src="/assets/img/mouse.png">
+          </ion-avatar>
+        </ion-chip>
         <ion-label>
           {{portfolio}}
         </ion-label>
+
       </ion-item-divider>
 
       <ion-item-sliding *ngFor="let holding of portfoliosdata">
