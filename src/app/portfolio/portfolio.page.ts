@@ -64,6 +64,7 @@ export class PortfolioPage {
       this.dummyData.getPortfolioData().subscribe((portfoliosdata: any[]) => {
         this.portfolios = ["Frankie's Portfolio", "Michale's Portfolio"];
         this.portfoliosdata = portfoliosdata;
+        console.log("frankie testing log");
       });
     });
   }
